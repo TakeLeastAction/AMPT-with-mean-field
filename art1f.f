@@ -179,7 +179,7 @@ cbz11/16/98end
 *  MPX,MPY,MPZ- MESH SIZES IN MOMENTUM SPACE [GEV/C] FOR PAULI LATTICE  *
 *---------------------------------------------------------------------- *
 clin      PARAMETER     (maxpar=200000,MAXR=50,AMU= 0.9383,
-      PARAMETER     (MAXSTR=150001,MAXR=1,AMU= 0.9383,
+      PARAMETER     (MAXSTR=150001,MAXR=100,AMU= 0.9383,
      1               AKA=0.498,etaM=0.5475)
       PARAMETER     (MAXX   =   20,  MAXZ  =    24)
       PARAMETER     (ISUM   =   1001,  IGAM  =    1100)
@@ -1549,7 +1549,7 @@ clin-2/23/03        22 Kaon0Long (converted at the last timestep)
 *         NDIRCT=1 INCLUDING DIRECT PROCESS,ELSE NOT
 *         DIR - PERCENTAGE OF DIRECT PION PRODUCTION PROCESS
 **********************************
-      PARAMETER      (MAXSTR=150001,MAXR=1,PI=3.1415926)
+      PARAMETER      (MAXSTR=150001,MAXR=100,PI=3.1415926)
       parameter      (MX=4,MY=4,MZ=8,MPX=4,MPY=4,mpz=10,mpzp=10)
       PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974,aks=0.895)
       PARAMETER      (AA1=1.26,APHI=1.02,AP1=0.13496)
@@ -4803,7 +4803,7 @@ c            IF (ABS(Z1-Z2) .GT. DELTAR) GO TO 400
 *                    Gy. Wolf  et al, Nucl Phys A517 (1990) 615;       *
 *                                     Nucl phys A552 (1993) 349.       *
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,aka=0.498,AP2=0.13957,AM0=1.232,
      2  PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383,APHI=1.020)
         parameter     (MX=4,MY=4,MZ=8,MPX=4,MPY=4,mpz=10,mpzp=10)
@@ -6591,7 +6591,7 @@ c
 *                     6-> Meson+Meson elastic
 *                     66-> Meson+meson-->K+K-
 **********************************
-      PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+      PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1     AMP=0.93828,AP1=0.13496,
      2 AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
       PARAMETER      (AKA=0.498,aks=0.895)
@@ -6817,7 +6817,7 @@ cbzdbg10/15/99 end
 *                        36    N*(+)(14)+D0--->N*(0)(15)+p
 *                        ++    see the note book for more listing
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AKA=0.498,APHI=1.020,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         parameter     (MX=4,MY=4,MZ=8,MPX=4,MPY=4,mpz=10,mpzp=10)
@@ -8127,7 +8127,7 @@ c     1NTAG,SIGNN,SIG)
 *       for N*(1535) we use the parameterization by Gy. Wolf et al     *
 *       Nucl phys A552 (1993) 349, added May 18, 1994                  *
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AKA=0.498,APHI=1.020,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         parameter     (MX=4,MY=4,MZ=8,MPX=4,MPY=4,mpz=10,mpzp=10)
@@ -9531,7 +9531,7 @@ c          R(3,I) = R(3,I) / GAMMA + Z0
 *         NESC    -  NUMBER OF ESCAPED PARTICLES      (INTEGER,OUTPUT) *
 *                                                                      *
 **********************************
-      PARAMETER     (MAXSTR= 150001,MAXR=1)
+      PARAMETER     (MAXSTR= 150001,MAXR=100)
       PARAMETER     (MAXX   =    20,  MAXZ  =    24)
 *
       dimension pxl(-maxx:maxx,-maxx:maxx,-maxz:maxz),
@@ -10170,7 +10170,7 @@ c     1  /(4.*SRT**2)-DMASS**2)
 *            AFTER THE DELTA OR N* DECAYING
 * DATE   : JAN. 24,1990, MODIFIED ON MAY 17, 1994 TO INCLUDE ETA 
         SUBROUTINE DECAY(IRUN,I,NNN,ISEED,wid,nt)
-        PARAMETER (MAXSTR=150001,MAXR=1,
+        PARAMETER (MAXSTR=150001,MAXR=100,
      1  AMN=0.939457,ETAM=0.5475,AMP=0.93828,AP1=0.13496,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926)
         COMMON /AA/ R(3,MAXSTR)
@@ -10353,7 +10353,7 @@ clin-5/2008:
 * DATE   : JAN. 24,1990, MODIFIED ON MAY 17, 1994 TO INCLUDE ETA PRODUCTION
         SUBROUTINE DKINE(IRUN,I,NNN,NLAB,ISEED,wid,nt)
         PARAMETER (hbarc=0.19733)
-        PARAMETER (MAXSTR=150001,MAXR=1,
+        PARAMETER (MAXSTR=150001,MAXR=100,
      1  AMN=0.939457,AMP=0.93828,ETAM=0.5475,
      2  AP1=0.13496,AP2=0.13957,AM0=1.232,PI=3.1415926)
         COMMON /AA/ R(3,MAXSTR)
@@ -10496,7 +10496,7 @@ c     lorentz boost:
 * DATE   : NOV.7,1994
 *----------------------------------------------------------------------------
         SUBROUTINE DECAY2(IRUN,I,NNN,ISEED,wid,nt)
-        PARAMETER (MAXSTR=150001,MAXR=1,
+        PARAMETER (MAXSTR=150001,MAXR=100,
      1  AMN=0.939457,ETAM=0.5475,AMP=0.93828,AP1=0.13496,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926)
         COMMON /AA/ R(3,MAXSTR)
@@ -10622,7 +10622,7 @@ c
 *--------------------------------------------------------------------------
         SUBROUTINE DKINE2(IRUN,I,NNN,NLAB,ISEED,wid,nt)
         PARAMETER (hbarc=0.19733)
-        PARAMETER (MAXSTR=150001,MAXR=1,
+        PARAMETER (MAXSTR=150001,MAXR=100,
      1  AMN=0.939457,AMP=0.93828,ETAM=0.5475,
      2  AP1=0.13496,AP2=0.13957,AM0=1.232,PI=3.1415926)
         COMMON /AA/ R(3,MAXSTR)
@@ -10851,7 +10851,7 @@ c     lorentz boost:
 *           
 * DATE    : JAN.29,1990
         SUBROUTINE DRESON(I1,I2)
-        PARAMETER (MAXSTR=150001,MAXR=1,
+        PARAMETER (MAXSTR=150001,MAXR=100,
      1  AMN=0.939457,AMP=0.93828,
      2  AP1=0.13496,AP2=0.13957,AM0=1.232,PI=3.1415926)
 clin-9/2012: improve precision for argument in sqrt():
@@ -10920,7 +10920,7 @@ c        DM=SQRT((E10+E20)**2-P(1,I)**2-P(2,I)**2-P(3,I)**2)
 *           AFTER PION + PION COLLISION
 * DATE    : NOV. 30,1994
         SUBROUTINE RHORES(I1,I2)
-        PARAMETER (MAXSTR=150001,MAXR=1,
+        PARAMETER (MAXSTR=150001,MAXR=100,
      1  AMN=0.939457,AMP=0.93828,
      2  AP1=0.13496,AP2=0.13957,AM0=1.232,PI=3.1415926)
 clin-9/2012: improve precision for argument in sqrt():
@@ -10983,7 +10983,7 @@ c        DM=SQRT((E10+E20)**2-P(1,I1)**2-P(2,I1)**2-P(3,I1)**2)
 *            LA = 2 FRO N*(1535) RESONANCE
 * DATE    : JAN.29,1990
         REAL FUNCTION XNPI(I1,I2,LA,XMAX)
-        PARAMETER (MAXSTR=150001,MAXR=1,
+        PARAMETER (MAXSTR=150001,MAXR=100,
      1  AMN=0.939457,AMP=0.93828,
      2  AP1=0.13496,AP2=0.13957,AM0=1.232,PI=3.1415926)
 clin-9/2012: improve precision for argument in sqrt():
@@ -11520,7 +11520,7 @@ c              w1440=0.2
 * DATE    : MAY 16, 1994
 ****************
         REAL FUNCTION XN1535(I1,I2,LA)
-        PARAMETER (MAXSTR=150001,MAXR=1,
+        PARAMETER (MAXSTR=150001,MAXR=100,
      1  AMN=0.939457,AMP=0.93828,ETAM=0.5475,
      2  AP1=0.13496,AP2=0.13957,AM0=1.232,PI=3.1415926)
 clin-9/2012: improve precision for argument in sqrt():
@@ -12945,7 +12945,7 @@ c      ekin = 2.*pmass*((srt/(2.*pmass))**2 - 1.)
 *           iblock   - 79 pion+N-->Delta+OMEGA
 *           iblock   - 222 pion+N-->Phi 
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,APHI=1.020,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
@@ -13828,7 +13828,7 @@ c         c1=sqrt(pr**2-cc1**2)/pr
 *           IBLOCK   - THE INFORMATION BACK                            *
 *                     7  ETA+N-->L/S+KAON
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
@@ -13928,7 +13928,7 @@ c      SUBROUTINE Crdir(PX,PY,PZ,SRT,I1,I2)
 *           IBLOCK   - THE INFORMATION BACK                            *
 *                    
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
@@ -14009,7 +14009,7 @@ c         c1=sqrt(pr**2-cc1**2)/pr
 *           iblock   - 82 OMEGA+D(N*)-->PION+N
 *                     222  PION+D --> PHI
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,APHI=1.020,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
@@ -14681,7 +14681,7 @@ c         C1   = 1.0 - 2.0 * RANART(NSEED)
 *           iblock   - 82 OMEGA+D(N*)-->PION+N
 *           iblock   - 222 pion+N-->Phi 
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER     (AKA=0.498,ALA=1.1157,ASA=1.1974,APHI=1.02)
@@ -15537,7 +15537,7 @@ c         c1=sqrt(pr**2-cc1**2)/pr
 *                     100-> K+ + N-bar -> Sigma-bar + PI
 *                     102-> PI + Sigma(Lambda)-bar -> K+ + N-bar
 **********************************
-        PARAMETER (MAXSTR=150001, MAXR=1, AMN=0.939457,
+        PARAMETER (MAXSTR=150001, MAXR=100, AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER  (AKA=0.498,ALA=1.1157,ASA=1.1974)
@@ -15636,7 +15636,7 @@ c
 *           IBLOCK   - THE INFORMATION BACK                            *
 *                     8-> PION+N-->L/S+KAON
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
@@ -15712,7 +15712,7 @@ clin-8/29/00*             DEALING WITH anti-nucleon annihilation with
 *       resonances) might be forbiden by charge conservation, this effect
 *       should be small, but keep it in mind.
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AMRHO=0.769,AMOMGA=0.782,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
@@ -15851,7 +15851,7 @@ cbali3/5/99
 *                
 *             iblock   - 1907
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AMRHO=0.769,AMOMGA=0.782,
      &  AMETA = 0.5473,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
@@ -15980,7 +15980,7 @@ c          return
 *             iblock   - 1908                                          *
 *             iblock   - 222   !! phi                                  *
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AMRHO=0.769,AMOMGA=0.782,APHI=1.02,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
           parameter (pimass=0.140, AMETA = 0.5473, aka=0.498,
@@ -16167,7 +16167,7 @@ c
 *           IBLOCK   - THE INFORMATION BACK                            *
 *                      71
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
@@ -16241,7 +16241,7 @@ csp11/03/01 end
 *           IBLOCK   - THE INFORMATION BACK                            *
 *                      71
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AP2=0.13957,AMRHO=0.769,AMOMGA=0.782,
      2  AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER (AKA=0.498,AKS=0.895,ALA=1.1157,ASA=1.1974
@@ -16519,7 +16519,7 @@ c
 *           IBLOCK   - THE INFORMATION BACK                            *
 *                      222
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AP2=0.13957,APHI=1.02,
      2  AM0=1.232,AMNS=1.52,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974,ACAS=1.3213)
@@ -16705,7 +16705,7 @@ csp11/21/01 end
 *                      226 --> phi + K* <-> K + pi(rho,omega)
 *                      227 --> phi + K* <-> K* + pi(rho,omega)
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AP2=0.13957,APHI=1.02,
      2  AM0=1.232,AMNS=1.52,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974,ACAS=1.3213)
@@ -17357,7 +17357,7 @@ c      real*4 function reab(i1,i2,srt,ictrl)
 *  reab   = cross section in fm**2                                            *
 *  ictrl=1,2,3 for pion, rho and omega+D(N*)    
 ****************************************
-      PARAMETER (MAXSTR=150001,MAXR=1,PI=3.1415926)
+      PARAMETER (MAXSTR=150001,MAXR=100,PI=3.1415926)
       parameter      (MX=4,MY=4,MZ=8,MPX=4,MPY=4,mpz=10,mpzp=10)
       PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
       parameter      (amn=0.938,ap1=0.14,arho=0.77,aomega=0.782)
@@ -17448,7 +17448,7 @@ c      real*4 function reab2d(i1,i2,srt)
 *  srt    = DSQRT(s) in GeV                                                   *
 *  reab   = cross section in mb
 ****************************************
-      PARAMETER      (MAXSTR=150001,MAXR=1,PI=3.1415926)
+      PARAMETER      (MAXSTR=150001,MAXR=100,PI=3.1415926)
       parameter      (MX=4,MY=4,MZ=8,MPX=4,MPY=4,mpz=10,mpzp=10)
       PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
       parameter      (amn=0.938,ap1=0.14,arho=0.77,aomega=0.782)
@@ -17748,7 +17748,7 @@ cc      SAVE /RNDF77/
 *                        36    N*(+)(14)+D0--->N*(0)(15)+p
 *                            and more
 ***********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AKA=0.498,APHI=1.020,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         parameter     (MX=4,MY=4,MZ=8,MPX=4,MPY=4,mpz=10,mpzp=10)
@@ -18043,7 +18043,7 @@ cbz11/25/98
 *       for N*(1535) we use the parameterization by Gy. Wolf et al     *
 *       Nucl phys A552 (1993) 349, added May 18, 1994                  *
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AKA=0.498,APHI=1.020,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         parameter     (MX=4,MY=4,MZ=8,MPX=4,MPY=4,mpz=10,mpzp=10)
@@ -18782,7 +18782,7 @@ c     (here taken as its central value + 2* B-W fullwidth):
        subroutine flow(nt)
 c       IMPLICIT REAL*4 (A-H,O-Z)
        PARAMETER ( PI=3.1415926,APion=0.13957,aka=0.498)
-        PARAMETER   (MAXSTR=150001,MAXR=1,AMU= 0.9383,etaM=0.5475)
+        PARAMETER   (MAXSTR=150001,MAXR=100,AMU= 0.9383,etaM=0.5475)
        DIMENSION ypion(-80:80),ypr(-80:80),ykaon(-80:80)
        dimension pxpion(-80:80),pxpro(-80:80),pxkaon(-80:80)
 *----------------------------------------------------------------------*
@@ -19175,7 +19175,7 @@ cbz3/9/99 kkbar end
      &                  XSK1, XSK2, XSK3, XSK4, XSK5, SIGP)
 c
 * ***************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AP2=0.13957,AM0=1.232,PI=3.1415926)
           PARAMETER (AKA=0.498, ALA = 1.1157, PIMASS=0.140, APHI=1.02)
         parameter (arho=0.77)
@@ -19253,7 +19253,7 @@ c
 *             iblock   - 221  K+ formation
 *             iblock   - 223  others
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AMRHO=0.769,AMOMGA=0.782,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974,ARHO=0.77)
@@ -19354,7 +19354,7 @@ c
 *      phi + N(D) <- rho + D   (same as pi + D)
 c
 * ***************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AP2=0.13957,AM0=1.232,PI=3.1415926)
           PARAMETER (AKA=0.498, ALA = 1.1157, PIMASS=0.140, APHI=1.02)
         parameter (arho=0.77)
@@ -19492,7 +19492,7 @@ c
 *                      223 --> phi destruction
 *                      20 -->  elastic
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER  (AKA=0.498, AKS=0.895, AOMEGA=0.7819,
@@ -19671,7 +19671,7 @@ c          xsk4 = amin1(20.,xsk4)
 *                      226 --> phi + K* -> K + pi(rho,omega)
 *                      227 --> phi + K* -> K* + pi(rho,omega)
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,ARHO=0.77,AOMEGA=0.7819,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER    (AKA=0.498,AKS=0.895)
@@ -19860,7 +19860,7 @@ c      subroutine xkhype(i1, i2, srt, sigk)
 *  xkkpi   = xsection in mb obtained from                                 *
 *           the detailed balance                                          *
 * ***********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,AMRHO=0.769,AMOMGA=0.782,APHI=1.02,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
           parameter (pimass=0.140, AMETA = 0.5473, aka=0.498,
@@ -21147,7 +21147,7 @@ c      SUBROUTINE Crkspi(PX,PY,PZ,SRT,I1,I2,IBLOCK)
      & IBLOCK,lbp1,lbp2,emm1,emm2)
 *             iblock   - 466
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1)
+        PARAMETER (MAXSTR=150001,MAXR=100)
           PARAMETER (AP1=0.13496,AP2=0.13957,RHOM = 0.770,PI=3.1415926)
         PARAMETER (AETA=0.548,AMOMGA=0.782)
         parameter (MX=4,MY=4,MZ=8,MPX=4,MPY=4,mpz=10,mpzp=10)
@@ -21208,7 +21208,7 @@ cc      SAVE /RNDF77/
 *           AFTER PION + KAON COLLISION
 *clin only here the K* mass may be different from aks=0.895
         SUBROUTINE KSRESO(I1,I2)
-        PARAMETER (MAXSTR=150001,MAXR=1,
+        PARAMETER (MAXSTR=150001,MAXR=100,
      1  AMN=0.939457,AMP=0.93828,
      2  AP1=0.13496,AP2=0.13957,AM0=1.232,PI=3.1415926)
 clin-9/2012: improve precision for argument in sqrt():
@@ -21293,7 +21293,7 @@ c sp 01/03/01
 *                  -45 Omega baryon(bar)
 *                   44 Di-Omega
 **********************************
-      PARAMETER      (MAXSTR=150001,MAXR=1,PI=3.1415926)
+      PARAMETER      (MAXSTR=150001,MAXR=100,PI=3.1415926)
       parameter      (MX=4,MY=4,MZ=8,MPX=4,MPY=4,mpz=10,mpzp=10)
       PARAMETER (AMN=0.939457,AMP=0.93828,AP1=0.13496,AP2=0.13957)
       PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974,aks=0.895)
@@ -21870,7 +21870,7 @@ clin-5/2008:
 *           IBLOCK   - THE INFORMATION BACK                            *
 *                     144-> hyp+N(D,N*)->hyp+N(D,N*)
 **********************************
-        PARAMETER (MAXSTR=150001,MAXR=1,AMN=0.939457,
+        PARAMETER (MAXSTR=150001,MAXR=100,AMN=0.939457,
      1  AMP=0.93828,AP1=0.13496,
      2  AP2=0.13957,AM0=1.232,PI=3.1415926,CUTOFF=1.8966,AVMASS=0.9383)
         PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
@@ -22670,7 +22670,7 @@ c
 clin-9/2008 Deuteron+Meson ->B+B and elastic collisions
       SUBROUTINE crdmbb(PX,PY,PZ,SRT,I1,I2,IBLOCK,
      1     NTAG,sig,NT,ianti)
-      PARAMETER (MAXSTR=150001,MAXR=1)
+      PARAMETER (MAXSTR=150001,MAXR=100)
       COMMON /AA/R(3,MAXSTR)
       COMMON /BB/ P(3,MAXSTR)
       COMMON /BG/BETAX,BETAY,BETAZ,GAMMA
@@ -22985,7 +22985,7 @@ c     spins and isospins) for d+Baryon elastic at the same sqrt(s)-threshold:
 clin-9/2008 Deuteron+Baryon elastic collisions
       SUBROUTINE crdbel(PX,PY,PZ,SRT,I1,I2,IBLOCK,
      1     NTAG,sig,NT,ianti)
-      PARAMETER (MAXSTR=150001,MAXR=1)
+      PARAMETER (MAXSTR=150001,MAXR=100)
       COMMON /AA/R(3,MAXSTR)
       COMMON /BB/ P(3,MAXSTR)
       COMMON /BG/BETAX,BETAY,BETAZ,GAMMA

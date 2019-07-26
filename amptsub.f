@@ -96,17 +96,17 @@ c      write(12,*) dt, ' dt'
 c      READ (13, *) NTMAX
 c      write(12,*) ntmax, ' ntmax'
 c      READ (13, *) ICOLL
-      ICOLL=-1
+      ICOLL= 1 !-1 ! by kjsun
 c      write(12,*) icoll, ' icoll'
 c      READ (13, *) NUM
 c     2/11/03 run events without test particles for now:
-      NUM=1
+      NUM=100
 c      write(12,*) num, ' num'
 c      READ (13, *) INSYS
       INSYS=1
 c      write(12,*) insys, ' insys'
 c      READ (13, *) IPOT
-      IPOT=3
+      IPOT=1 !3 !by kjsun
 c      write(12,*) ipot, ' ipot'
 c      READ (13, *) MODE
       MODE=0
@@ -419,7 +419,7 @@ c.....formation time
 
 c.....before invoking ARTORD:
 c.....IAINT2(1) must be set:
-      PARAMETER (MAXSTR=150001,MAXR=1)
+      PARAMETER (MAXSTR=150001,MAXR=100)
       COMMON /ARPRNT/ ARPAR1(100), IAPAR2(50), ARINT1(100), IAINT2(50)
 cc      SAVE /ARPRNT/
       COMMON /ARPRC/ ITYPAR(MAXSTR),
@@ -508,7 +508,7 @@ c.....particle record for many test particle runs.
 
       SUBROUTINE ARINI2(K)
 
-      PARAMETER (MAXSTR=150001,MAXR=1)
+      PARAMETER (MAXSTR=150001,MAXR=100)
       COMMON /ARPRNT/ ARPAR1(100), IAPAR2(50), ARINT1(100), IAINT2(50)
 cc      SAVE /ARPRNT/
       COMMON /ARPRC/ ITYPAR(MAXSTR),
@@ -1300,7 +1300,7 @@ c        subroutine newka(icase,irun,iseed,dt,nt,ictrl,i1,i2,
 c     &                                   srt,pcx,pcy,pcz)
         subroutine newka(icase,irun,iseed,dt,nt,ictrl,i1,i2,
      &                                   srt,pcx,pcy,pcz,iblock)
-      PARAMETER      (MAXSTR=150001,MAXR=1)
+      PARAMETER      (MAXSTR=150001,MAXR=100)
       PARAMETER      (AKA=0.498)
       COMMON   /AA/  R(3,MAXSTR)
 cc      SAVE /AA/
@@ -1926,7 +1926,7 @@ c.....file `NEWNNK.FOR'
      &                                   srt,pcx,pcy,pcz,nchrg)
 c        <pt>=0.27+0.037*log(srt) was changed to 0.632 + ... on Aug. 14, 1997
 c     CANCELED also alpha=1 changed to alpha=3 to decrease the leadng effect.
-      PARAMETER      (MAXSTR=150001,MAXR=1)
+      PARAMETER      (MAXSTR=150001,MAXR=100)
       PARAMETER      (AKA=0.498)
       COMMON   /AA/  R(3,MAXSTR)
 cc      SAVE /AA/
@@ -2309,7 +2309,7 @@ c     &                  pcx,pcy,pcz,nchrg,ratiok)
 * 7.  PI- + N -> N + K0 + K-
 * NOTE: the mass of K is assumed to be same as K0. ie. 0.498 NOT 0.494
 ****************************************
-      PARAMETER      (MAXSTR=150001,MAXR=1,PI=3.1415926)
+      PARAMETER      (MAXSTR=150001,MAXR=100,PI=3.1415926)
       PARAMETER      (AKA=0.498)
       COMMON   /AA/  R(3,MAXSTR)
 cc      SAVE /AA/
@@ -2530,7 +2530,7 @@ c.....file `PIHYPN.FOR'
 ******************************************
 
 c NOTE: for PI + Hyperon: the produced kaons have mass 0.498
-      PARAMETER      (MAXSTR=150001,MAXR=1,PI=3.1415926)
+      PARAMETER      (MAXSTR=150001,MAXR=100,PI=3.1415926)
       PARAMETER      (AKA=0.498)
       COMMON   /AA/  R(3,MAXSTR)
 cc      SAVE /AA/
@@ -2696,7 +2696,7 @@ c.....file `KAONN.FOR'
 * Process: PI + sigma(or Lambda) <- Kbar + N
 * NOTE: the mass of K is assumed to be same as K0. ie. 0.498 NOT 0.494
 ****************************************
-      PARAMETER      (MAXSTR=150001,MAXR=1,PI=3.1415926)
+      PARAMETER      (MAXSTR=150001,MAXR=100,PI=3.1415926)
       PARAMETER      (AKA=0.498,ALA=1.1157,ASA=1.1974)
       COMMON   /AA/  R(3,MAXSTR)
 cc      SAVE /AA/
@@ -2866,7 +2866,7 @@ c=======================================================================
 c.....analysis subroutine before the hadronic space-time evolution
 
       SUBROUTINE ARTAN1
-      PARAMETER (MAXSTR=150001, MAXR=1)
+      PARAMETER (MAXSTR=150001, MAXR=100)
 c.....y cut for mt spectrum
 cbz3/17/99
 c      PARAMETER (YMT1 = -0.4, YMT2 = 0.4)
@@ -3081,7 +3081,7 @@ c.....analysis subroutine after the hadronic space-time evolution
 
       SUBROUTINE ARTAN2
 
-      PARAMETER (MAXSTR=150001, MAXR=1)
+      PARAMETER (MAXSTR=150001, MAXR=100)
 c.....y cut for mt spectrum
 cbz3/17/99
 c      PARAMETER (YMT1 = -0.4, YMT2 = 0.4)
@@ -3288,7 +3288,7 @@ c.....output analysis results at the end of the simulation
 
       SUBROUTINE ARTOUT(NEVNT)
 
-      PARAMETER (MAXSTR=150001, MAXR=1)
+      PARAMETER (MAXSTR=150001, MAXR=100)
 c.....y cut for mt spectrum
 cbz3/17/99
 c      PARAMETER (YMT1 = -0.4, YMT2 = 0.4)
@@ -4707,7 +4707,7 @@ c-----------------------------------------------------------------------
 c.....analysis subroutine before ARTMN
       SUBROUTINE HJANA3
 c
-      PARAMETER (MAXSTR=150001, MAXR=1)
+      PARAMETER (MAXSTR=150001, MAXR=100)
 c.....y cut for mt spectrum
       PARAMETER (YMIN = -1.0, YMAX = 1.0)
 cbz11/7/99 end
@@ -4791,7 +4791,7 @@ c-----------------------------------------------------------------------
 
 c.....analysis subroutine after ARTMN
       SUBROUTINE HJANA4
-      PARAMETER (MAXSTR=150001, MAXR=1)
+      PARAMETER (MAXSTR=150001, MAXR=100)
 c.....y cut for mt spectrum
 cbz11/7/99
 c      PARAMETER (YMIN = -0.5, YMAX = 0.5)
@@ -5045,7 +5045,7 @@ clin-3/2009
 c     Initialize hadron weights; 
 c     Can add initial hadrons before the hadron cascade starts (but after ZPC).
       subroutine addhad
-      PARAMETER (MAXSTR=150001,MAXR=1,xmd=1.8756)
+      PARAMETER (MAXSTR=150001,MAXR=100,xmd=1.8756)
       double precision  smearp,smearh
       COMMON /ARPRNT/ ARPAR1(100), IAPAR2(50), ARINT1(100), IAINT2(50)
       COMMON /ARPRC/ ITYPAR(MAXSTR),

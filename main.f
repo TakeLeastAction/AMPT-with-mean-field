@@ -260,6 +260,9 @@ c          CALL HJANA4
           CALL ARTAN2
  2000  CONTINUE
 c
+!       call artmn
+!       call artan2
+
        CALL ARTOUT(NEVNT)
 clin-5/2009 ctest off:
 c       call flowh0(NEVNT,2)

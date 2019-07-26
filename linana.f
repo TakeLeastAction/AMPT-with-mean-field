@@ -5,7 +5,7 @@ clin-3/2009 Note: freezeout spacetime values cannot be trusted for K0S & K0L
 c     as K0S/K0L are converted from K+/K- by hand at the end of hadron cascade.
       subroutine hbtout(nnew,nt,ntmax)
 c
-      PARAMETER  (MAXSTR=150001,MAXR=1)
+      PARAMETER  (MAXSTR=150001,MAXR=100)
 clin-5/2008 give tolerance to regular particles (perturbative probability 1):
       PARAMETER  (oneminus=0.99999,oneplus=1.00001)
       dimension lastkp(MAXSTR), newkp(MAXSTR),xnew(3)
@@ -1970,7 +1970,7 @@ c       ipion=0: resonance or pi0 in lb(i1); >0: pi0 in lpion(ipion).
 
         PARAMETER (hbarc=0.19733)
         PARAMETER (AK0=0.498,APICH=0.140,API0=0.135,AN=0.940,ADDM=0.02)
-        PARAMETER (MAXSTR=150001, MAXR=1)
+        PARAMETER (MAXSTR=150001, MAXR=100)
         COMMON /INPUT2/ ILAB, MANYB, NTMAX, ICOLL, INSYS, IPOT, MODE, 
      &       IMOMEN, NFREQ, ICFLOW, ICRHO, ICOU, KPOTEN, KMUL
 cc      SAVE /INPUT2/
@@ -3139,7 +3139,7 @@ c=======================================================================
 c     Calculate flow from formed hadrons, called by art1e.f:
 c     Note: numbers in art not in double precision!
         subroutine flowh(ct)
-        PARAMETER (MAXSTR=150001, MAXR=1)
+        PARAMETER (MAXSTR=150001, MAXR=100)
         dimension tsh(31)
         DOUBLE PRECISION  v2h,xnhadr,eth,v2h2,s2h
         DOUBLE PRECISION  v2hp,xnhadp,v2hsum,v2h2sm,v2hevt(3)
@@ -3358,7 +3358,7 @@ c     event-by-event average & variance of v2h:
 c=======================================================================
 c     2/23/00 flow from all initial hadrons just before entering ARTMN:
         subroutine iniflw(NEVNT,idd)
-        PARAMETER (MAXSTR=150001, MAXR=1)
+        PARAMETER (MAXSTR=150001, MAXR=100)
         DOUBLE PRECISION  v2i,eti,xmulti,v2mi,s2mi,xmmult,
      1       v2bi,s2bi,xbmult
         COMMON /RUN/ NUM
@@ -3655,7 +3655,7 @@ c     via embedding back-to-back high-Pt pion pair then melting the pion pair
 c     by generating the internal quark and antiquark momentum parallel to 
 c      the pion momentum (in order to produce a high-Pt and a low Pt parton):
       subroutine embedHighPt
-      PARAMETER (MAXSTR=150001,MAXR=1,pichmass=0.140,pi0mass=0.135,
+      PARAMETER (MAXSTR=150001,MAXR=100,pichmass=0.140,pi0mass=0.135,
      1     pi=3.1415926,nxymax=10001)
       common/embed/iembed,nsembd,pxqembd,pyqembd,xembd,yembd,
      1     psembd,tmaxembd,phidecomp
