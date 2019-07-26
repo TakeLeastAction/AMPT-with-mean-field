@@ -184,6 +184,8 @@ c
 c     AMPT momentum and space info at freezeout:
       OPEN (16, FILE = 'ana/ampt.dat', STATUS = 'UNKNOWN')
       OPEN (14, FILE = 'ana/zpc.dat', STATUS = 'UNKNOWN')
+      OPEN(10,FILE='ana/initial_ampt.dat', STATUS = 'UNKNOWN') ! by kaijia sun 19/07/26
+	  
 ctest off for resonance (phi, K*) studies:
 c      OPEN (17, FILE = 'ana/res-gain.dat', STATUS = 'UNKNOWN')
 c      OPEN (18, FILE = 'ana/res-loss.dat', STATUS = 'UNKNOWN')

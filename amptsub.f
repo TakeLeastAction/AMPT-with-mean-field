@@ -550,6 +550,13 @@ cc      SAVE /RNDF77/
          PZ1(I, K) = PZAR(I)
          EE1(I, K) = PEAR(I)
          XM1(I, K) = XMAR(I)
+		 
+      write(10,2011)
+     &ITYP1(I, K),PX1(I, K),PY1(I, K),PZ1(I, K),XM1(I, K)
+     &,GX1(I, K),GY1(I, K),GZ1(I, K),FT1(I, K)
+2011    FORMAT(1X,I5,4F12.3,4G12.3)
+
+		 
 clin-3/2009 hadron weights are initialized in addhad():
 clin-5/2008 all hadrons not perturbatively-produced have the weight of 1:
 c         dpp1(I,K)=1.
